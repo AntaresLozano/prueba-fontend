@@ -15,6 +15,13 @@ Una aplicación React Native que implementa **Clean Architecture** y **principio
 - ✅ **TypeScript** para tipado estático
 - ✅ **Tailwind CSS** para estilos
 
+
+## 📲 Descargar APK
+
+Puedes descargar la última versión de la APK directamente desde:
+[Descargar APK](https://expo.dev/accounts/alozanog/projects/app-usuarios-home-power/builds/0a2bc39e-2ec7-445b-ac4e-9fdb72b203a5)
+
+
 ## 📱 Pantallazos de la Aplicación
 
 <div align="center">
