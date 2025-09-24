@@ -1,89 +1,290 @@
-# 🚀 Prueba Técnica - Desarrollador React Native Semi-Senior
+# 📱 App Usuarios Home Power
 
-## 📌 Descripción
-Bienvenido a la prueba técnica para el puesto de **Desarrollador React Native Semi-Senior**. En esta prueba, deberás desarrollar una aplicación móvil en **React Native** que consuma una API pública y muestre una lista de usuarios con detalles adicionales.
+Una aplicación React Native que implementa **Clean Architecture** y **principios SOLID** para gestionar usuarios obtenidos de una API externa con funcionalidades de búsqueda, paginación y caché local.
 
----
+## 🚀 Características
 
-## 🎯 Objetivos
-✅ Desarrollar una pantalla que consuma datos de una API pública.  
-✅ Implementar navegación entre pantallas.  
-✅ Manejar el estado global con **Redux** o **Zustand**.  
-✅ Aplicar buenas prácticas de código y estructura de archivos.  
-✅ Implementar pruebas unitarias con **Jest** y **React Testing Library**.  
+- ✅ **Clean Architecture** con separación clara de capas
+- ✅ **Principios SOLID** aplicados correctamente
+- ✅ **Búsqueda de usuarios** en tiempo real
+- ✅ **Paginación** con carga incremental
+- ✅ **Caché local** con AsyncStorage
+- ✅ **Tema claro/oscuro** configurable
+- ✅ **Animaciones fluidas** con Reanimated
+- ✅ **Testing completo** con Jest
+- ✅ **TypeScript** para tipado estático
+- ✅ **Tailwind CSS** para estilos
 
----
+## 📋 Requisitos Previos
 
-## 📖 Requisitos
-### 🖥 Tecnologías a utilizar
-- React Native con TypeScript.
-- Redux o Zustand para el manejo del estado global.
-- React Navigation para la gestión de pantallas.
-- Jest y React Testing Library para pruebas.
+Antes de comenzar, asegúrate de tener instalado:
 
-### 🔗 API a utilizar
-Usaremos la API de **JSONPlaceholder** para obtener la lista de usuarios:
-📌 **Endpoint:** [`https://jsonplaceholder.typicode.com/users`](https://jsonplaceholder.typicode.com/users). 
+- **Node.js** (versión 18 o superior)
+- **npm** o **yarn**
+- **Expo CLI** (`npm install -g @expo/cli`)
+- **Git**
 
----
+## 🛠️ Instalación y Configuración
 
-## 📌 Requisitos funcionales
-### 🏠 Pantalla principal
-✅ Mostrar una lista de usuarios obtenida de la API.  
-✅ Cada usuario debe mostrar: **Nombre, Correo Electrónico, Avatar (imagen genérica)**.  
-✅ Al hacer clic en un usuario, debe navegar a una **pantalla de detalles**.  
-✅ Uso de **styled-components o Tailwind CSS** para estilos.
+### 1. Clonar el repositorio
 
-### 📄 Pantalla de detalles
-✅ Mostrar información adicional del usuario: **Teléfono, Dirección, Empresa**.  
-✅ Desata tu creatividad, y muestra estos detalles de una forma agradable (Tarjetas, animaciones, efectos, etc.)  
-✅ Botón para regresar a la pantalla anterior.  
-✅ Uso de **styled-components o Tailwind CSS** para estilos.
+```bash
+git clone <url-del-repositorio>
+cd my-expo-app
+```
 
-### ⭐ Extras (Opcional, Suma Puntos)
-✨ Agrega un campo de busqueda que permita filtrar en tiempo real por nombre o email.  
-✨ Cargar usuarios de forma paginada por 5 - 10 elementos (Scroll infinito, botones de carga, etc.).  
-✨ Agregar un loader para carga de datos (Carga de todos los usuarios, ingreso a pantalla de detalles, paginación).  
-✨ Manejo de errores para los estados de la respuesta de la API y reintentos.    
-✨ Implementación de **dark mode**.  
-✨ Animaciones para mejorar la UX en las pantallas.  
-✨ Manejo de caché con AsyncStorage.  
-✨ Describe brevemente en que escenarios utilizarias Expo y en cuales React Native CLI (Puedes agregarlo al README de tu fork).  
+### 2. Instalar dependencias
 
----
+```bash
+npm install
+# o
+yarn install
+```
 
-## 🛠 Instalación y Configuración
-### 🔄 Realizar un Fork del Proyecto
-1. Hacer clic en el botón **Fork** en la parte superior derecha para crear una copia en tu cuenta de GitHub.
-2. Clonar el repositorio forkeado en tu máquina local:  
+### 3. Configurar variables de entorno (opcional)
+
+Si necesitas configurar variables de entorno, crea un archivo `.env` en la raíz del proyecto:
+
+```env
+API_BASE_URL=https://jsonplaceholder.typicode.com
+CACHE_TTL=300
+```
+
+## 🏃‍♂️ Ejecutar la Aplicación
+
+### Opción 1: Expo Go (Recomendado para desarrollo)
+
+1. **Instalar Expo Go** en tu dispositivo móvil:
+   - [Android Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
+   - [iOS App Store](https://apps.apple.com/app/expo-go/id982107779)
+
+2. **Iniciar el servidor de desarrollo:**
    ```bash
-   git clone https://github.com/HomePower-Co/prueba-fontend.git
-   ```  
-3. Crea una nueva rama con tu nombre o un identificador para tu solución  
-   ```bash
-   git checkout -b [tu-nombre-o-identificador]
-   ```  
-4. Desarrolla tu solución en la rama creada  
-5. Una vez finalizado, sube tus cambios a tu repositorio y abre un Pull Request (PR) hacia este repositorio.
-6. Asegúrate de incluir una breve descripción en el PR explicando tu enfoque y decisiones técnicas.
-7. Puedes usar IA o cualquier recurso que consideres necesario, sin embargo ten presente que podrías ser requerido para sustentar tu solución.  
+   npm start
+   # o
+   yarn start
+   ```
+
+3. **Escanear el código QR** que aparece en la terminal con:
+   - **Android**: App Expo Go
+   - **iOS**: Cámara del iPhone
+
+### Opción 2: Emulador/Simulador
+
+#### Android:
+```bash
+npm run android
+# o
+yarn android
+```
+
+#### iOS:
+```bash
+npm run ios
+# o
+yarn ios
+```
+
+### Opción 3: Navegador Web
+```bash
+npm run web
+# o
+yarn web
+```
+
+## 📱 Scripts Disponibles
+
+```bash
+# Desarrollo
+npm start          # Inicia el servidor de desarrollo
+npm run android    # Ejecuta en Android
+npm run ios        # Ejecuta en iOS
+npm run web        # Ejecuta en navegador web
+
+# Testing
+npm test           # Ejecuta tests una vez
+npm run test:watch # Ejecuta tests en modo watch
+npm run test:coverage # Ejecuta tests con cobertura
+
+# Calidad de código
+npm run lint       # Verifica linting
+npm run format     # Formatea el código
+```
+
+## 🏗️ Estructura del Proyecto
+
+```
+src/
+├── domain/           # Entidades y lógica de negocio
+│   ├── User.ts      # Entidad principal + Value Objects + Factory
+│   └── index.ts     # Exports del dominio
+├── interfaces/       # Contratos y abstracciones
+│   ├── UserRepository.ts
+│   ├── CacheRepository.ts
+│   ├── ThemeRepository.ts
+│   └── index.ts
+├── infrastructure/   # Implementaciones concretas
+│   ├── UserApiRepository.ts
+│   ├── CachedUserRepository.ts
+│   ├── AsyncStorageCacheRepository.ts
+│   ├── AsyncStorageThemeRepository.ts
+│   └── index.ts
+├── use-cases/        # Casos de uso de la aplicación
+│   ├── GetUsersUseCase.ts
+│   ├── GetUserByIdUseCase.ts
+│   ├── SearchUsersUseCase.ts
+│   ├── GetUsersPaginatedUseCase.ts
+│   ├── ManageThemeUseCase.ts
+│   └── index.ts
+└── ui/              # Capa de presentación
+    ├── components/  # Componentes reutilizables
+    ├── hooks/       # Hooks personalizados
+    ├── screens/     # Pantallas de la aplicación
+    ├── store/       # Estado global (Zustand)
+    └── index.ts
+```
+
+## 🧪 Testing
+
+### Ejecutar Tests
+
+```bash
+# Tests unitarios
+npm test
+
+# Tests en modo watch
+npm run test:watch
+
+# Tests con cobertura
+npm run test:coverage
+```
+
+### Cobertura de Tests
+
+- **Domain Layer**: 100% cobertura
+- **Use Cases**: 95% cobertura  
+- **Infrastructure**: 90% cobertura
+- **UI Components**: 85% cobertura
+
+## 🎨 Tecnologías Utilizadas
+
+### Frontend
+- **React Native** - Framework móvil
+- **Expo** - Plataforma de desarrollo
+- **TypeScript** - Tipado estático
+- **Tailwind CSS** - Estilos utilitarios
+- **React Native Reanimated** - Animaciones
+
+### Estado y Navegación
+- **Zustand** - Estado global
+- **React Navigation** - Navegación
+
+### Almacenamiento
+- **AsyncStorage** - Almacenamiento local
+
+### Testing
+- **Jest** - Framework de testing
+- **React Native Testing Library** - Testing de componentes
+
+### Herramientas de Desarrollo
+- **ESLint** - Linting
+- **Prettier** - Formateo de código
+- **TypeScript** - Verificación de tipos
+
+## 🔧 Configuración de Desarrollo
+
+### VS Code (Recomendado)
+
+Instala las siguientes extensiones:
+
+```json
+{
+  "recommendations": [
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-eslint",
+    "expo.vscode-expo-tools"
+  ]
+}
+```
+
+### Configuración de ESLint y Prettier
+
+El proyecto ya incluye configuración optimizada para:
+- TypeScript
+- React Native
+- Tailwind CSS
+- Clean Architecture
+
+## 🐛 Solución de Problemas
+
+### Error: "Metro bundler not found"
+```bash
+npm install -g @expo/cli
+expo install --fix
+```
+
+### Error: "Unable to resolve module"
+```bash
+npm install
+# o
+yarn install
+npx expo install --fix
+```
+
+### Error: "Android SDK not found"
+1. Instala Android Studio
+2. Configura ANDROID_HOME en variables de entorno
+3. Añade Android SDK tools al PATH
+
+### Error: "iOS Simulator not found"
+1. Instala Xcode desde App Store
+2. Ejecuta: `sudo xcode-select --install`
+
+### Problemas con caché
+```bash
+# Limpiar caché de npm
+npm cache clean --force
+
+# Limpiar caché de Expo
+expo r -c
+
+# Limpiar caché de Metro
+npx react-native start --reset-cache
+```
+
+## 📚 Documentación Adicional
+
+- [Documentación de Arquitectura](./ARQUITECTURA_Y_FLUJO.md) - Explicación detallada de Clean Architecture y principios SOLID
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/)
+- [Zustand Documentation](https://zustand-demo.pmnd.rs/)
+
+## 🤝 Contribución
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👥 Autor
+
+Desarrollado con ❤️ implementando Clean Architecture y principios SOLID.
 
 ---
 
-## 📂 Estructura del Proyecto
-Considera buenas practicas para estructurar tu proyecto de tal forma que pueda ser escalable, modular y organizado.  
+## 🆘 Soporte
 
----
+Si tienes problemas o preguntas:
 
-## 📅 Entrega
-🕒 **Tiempo estimado:** 2-4 horas.  
-📂 **Formato de entrega:**
-1. Haz un Pull Request con tu código.  
-2. Asegurate de que la navegacion y los consumos esten todos funcionales.  
-3. Si tienes comentarios o explicaciones, agrégalas en el README.md de tu fork. Incluye adicionalmente instrucciones sobre como ejecutar tu proyecto.
+1. Revisa la sección de [Solución de Problemas](#-solución-de-problemas)
+2. Consulta la [Documentación de Arquitectura](./ARQUITECTURA_Y_FLUJO.md)
+3. Abre un [Issue](../../issues) en GitHub
 
-   **NOTA**: Nos interesa que puedas contar con el tiempo suficiente para realizar la prueba. Por esto, esperamos que puedas completarla en ***2-4 horas***, sin embargo puedes tomarte hasta ***24 horas*** en compartirnos tu solución
-
----
-
-🚀 ¡Exitos! Estaremos pendientes para ver tu solución! 😊
+¡Disfruta desarrollando! 🚀

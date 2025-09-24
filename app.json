@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "app-usuarios-home-power",
+    "slug": "app-usuarios-home-power",
+    "version": "1.0.0",
+
+    "web": {
+      "favicon": "./assets/logo.png"
+    },
+
+    "experiments": {
+      "tsconfigPaths": true
+    },
+
+    "plugins": [],
+
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+
+    "userInterfaceStyle": "light",
+
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#ffffff"
+      }
+    }
+  }
+}
