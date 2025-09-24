@@ -159,13 +159,6 @@ npm run test:watch
 npm run test:coverage
 ```
 
-### Cobertura de Tests
-
-- **Domain Layer**: 100% cobertura
-- **Use Cases**: 95% cobertura  
-- **Infrastructure**: 90% cobertura
-- **UI Components**: 85% cobertura
-
 ## 🎨 Tecnologías Utilizadas
 
 ### Frontend
