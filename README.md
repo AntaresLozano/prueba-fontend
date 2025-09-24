@@ -15,6 +15,15 @@ Una aplicación React Native que implementa **Clean Architecture** y **principio
 - ✅ **TypeScript** para tipado estático
 - ✅ **Tailwind CSS** para estilos
 
+## 📱 Pantallazos de la Aplicación
+
+<div align="center">
+  <img src="assets/1.jpeg" alt="Pantallazo 1" width="200" style="margin: 10px;">
+  <img src="assets/2.jpeg" alt="Pantallazo 2" width="200" style="margin: 10px;">
+  <img src="assets/3.jpeg" alt="Pantallazo 3" width="200" style="margin: 10px;">
+  <img src="assets/4.jpeg" alt="Pantallazo 4" width="200" style="margin: 10px;">
+</div>
+
 ## 📋 Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalado:

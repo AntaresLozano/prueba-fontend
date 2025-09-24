@@ -3,28 +3,24 @@
     "name": "app-usuarios-home-power",
     "slug": "app-usuarios-home-power",
     "version": "1.0.0",
-
     "web": {
       "favicon": "./assets/logo.png"
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
     "plugins": [],
-
     "orientation": "portrait",
     "icon": "./assets/logo.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -32,6 +28,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.alozanog.appusuarioshomepower"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0a588676-d18a-4e25-b24b-bf1d107f25f1"
       }
     }
   }
